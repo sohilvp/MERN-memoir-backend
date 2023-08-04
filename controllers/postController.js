@@ -13,10 +13,10 @@ exports.createPost = async (req, res) => {
       title,
       desc: text,
       username,
-      photo:{
+      photo: filename ? {
         data: fs.readFileSync('uploads/'+filename),
         contentType:"image/png"
-      } 
+      } : ""
     });
     res.status(201).json(post);
   } catch (err) {
