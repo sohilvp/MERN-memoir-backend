@@ -15,7 +15,6 @@ app.use(require( './routes/postRoutes'))
 
 
 
-
 // server && mongoDb connection
 mongoose.connect(
     process.env.MONGO_CONNECT_URI
